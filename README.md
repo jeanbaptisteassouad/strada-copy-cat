@@ -10,10 +10,10 @@ The second endpoint (GET /statsBetween) lets you get statistics about all the ru
 
 ## API
 
-Endpoint | Method | Query
------ | ----- | -----
-/addRun | POST | __start_date__ _:: UnixEpoch_, __end_date__ _:: UnixEpoch_, __kilo__ _:: PositiveNumber_, __calo__ _:: PositiveNumber_
-/statsBetween | GET | __start_date__ :: _UnixEpoch_, __end_date__ :: _UnixEpoch_
+Endpoint | Method | Query | Return
+----- | ----- | ----- | -----
+/addRun | POST | __start_date__ _:: UnixEpoch_, __end_date__ _:: UnixEpoch_, __kilo__ _:: PositiveNumber_, __calo__ _:: PositiveNumber_ | {__id__ _:: PositiveInteger_}
+/statsBetween | GET | __start_date__ :: _UnixEpoch_, __end_date__ :: _UnixEpoch_ | {__average_kilo__ _:: PositiveNumber_, __average_calo__ _:: PositiveNumber_}
 
 ## How to ?
 
