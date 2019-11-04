@@ -23,7 +23,6 @@ const insertOneRun = (start_date, end_date, km, calo, a) => {
 
 const selectAllRunBetween = (start_date, end_date, a) => {
   return a.filter((a) => start_date <= Run.getEndDate(a) && Run.getStartDate(a) <= end_date)
-    .map((a) => Run.crop(start_date, end_date, a))
 }
 
 

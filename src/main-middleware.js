@@ -4,7 +4,7 @@ module.exports = (Api) => {
   const app = express()
 
   app.use(express.json())
-  app.use(express.urlencoded())
+  app.use(express.urlencoded({ extended: true }))
 
   const validateNumberQuery = (prop) => (req, res, next) => {
     const query = req.query

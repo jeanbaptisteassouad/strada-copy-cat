@@ -19,6 +19,7 @@ module.exports = (Db) => {
 
   const statsBetween = (start_date, end_date) => {
     const runs = Db.selectAllRunBetween(start_date, end_date, db)
+      .map((a) => Run.crop(start_date, end_date, a))
     const kilos = []
     const calos = []
 
