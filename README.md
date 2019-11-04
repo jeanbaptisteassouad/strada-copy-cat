@@ -29,4 +29,9 @@ To run on your computer :
 yarn start
 ```
 
+## Architecture
+
+This app is divided into three parts : __Endpoints management and data validation__ (main-middleware.js), __App logic__ (api.js and run.js), __Database interface__ (mockup-db.js).
+
+Each part can be mocked or replaced considering that the module interfaces and functionalities remain the same.
 
