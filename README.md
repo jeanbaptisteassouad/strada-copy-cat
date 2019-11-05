@@ -29,6 +29,12 @@ To run on your computer :
 yarn start
 ```
 
+To deploy, you will need to have git and docker and then to run :
+
+```
+make
+```
+
 ## Architecture
 
 This app is divided into three parts : __Endpoints management and data validation__ (main-middleware.js), __App logic__ (api.js and run.js), __Database interface__ (mockup-db.js).
