@@ -3,6 +3,7 @@ const expect = chai.expect
 
 const root_path = '..'
 
+// const Db = require(root_path + '/3-database/file-based-sqlite-db')
 const Db = require(root_path + '/3-database/in-memory-sqlite-db')
 // const Db = require(root_path + '/3-database/mockup-db')
 require(root_path + '/2-core-logic/api')(Db).then((Api) => {
