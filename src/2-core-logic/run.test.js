@@ -1,9 +1,9 @@
 const chai = require('chai')
 const expect = chai.expect
 
-const root_path = '.'
+const root_path = '..'
 
-const Run = require(root_path + '/run')
+const Run = require(root_path + '/2-core-logic/run')
 
 describe('Run : test of the run data structure', () => {
   describe('.crop', () => {

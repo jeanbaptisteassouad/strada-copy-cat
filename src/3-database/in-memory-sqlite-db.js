@@ -1,6 +1,6 @@
-const root_path = '.'
+const root_path = '..'
 
-const Run = require(root_path + '/run')
+const Run = require(root_path + '/2-core-logic/run')
 
 const sqlite3 = require('sqlite3').verbose()
 

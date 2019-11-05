@@ -5,8 +5,8 @@ chai.use(chaiHttp)
 
 const expect = chai.expect
 
-const root_path = '.'
-const MainMiddleware = require(root_path + '/main-middleware')
+const root_path = '..'
+const MainMiddleware = require(root_path + '/1-web-interface/main-middleware')
 
 const port = 8000
 
