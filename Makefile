@@ -15,5 +15,6 @@ run: build
 	sudo docker run \
 		--rm \
 		-p 8000:8000 \
+		--mount type=bind,source=$(pwd)/db,target=/workdir/db \
 		-it \
 		$(image_name)
