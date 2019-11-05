@@ -22,7 +22,7 @@ describe('MainMiddleware : test of the api endpoints', () => {
           expect(_kilo).to.equal(kilo)
           expect(_calo).to.equal(calo)
 
-          return ans.id
+          return Promise.resolve(ans.id)
         }
       }
 
@@ -56,10 +56,10 @@ describe('MainMiddleware : test of the api endpoints', () => {
     const statsBetweenTest = (start_date, end_date, status, ans, done) => {
       const Api = {
         statsBetween: (start_date, end_date) => {
-          return {
+          return Promise.resolve({
             average_kilo:ans.average_kilo,
             average_calo:ans.average_calo,
-          }
+          })
         }
       }
 

@@ -44,10 +44,10 @@ module.exports = (Api) => {
       const calo = req.query.calo
 
 
-      const id = Api.addRun(start_date, end_date, kilo, calo)
-
-      res.send({
-        id
+      Api.addRun(start_date, end_date, kilo, calo).then((id) => {
+        res.send({
+          id
+        })        
       })
     }
   )
@@ -60,11 +60,11 @@ module.exports = (Api) => {
       const start_date = req.query.start_date
       const end_date = req.query.end_date
 
-      const ans = Api.statsBetween(start_date, end_date)
-
-      res.send({
-        average_kilo:ans.average_kilo,
-        average_calo:ans.average_calo,
+      Api.statsBetween(start_date, end_date).then((ans) => {
+        res.send({
+          average_kilo:ans.average_kilo,
+          average_calo:ans.average_calo,
+        })
       })
     }
   )

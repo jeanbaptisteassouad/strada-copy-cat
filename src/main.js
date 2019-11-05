@@ -5,11 +5,17 @@ const Api = require(root_path + '/api')
 const MainMiddleware = require(root_path + '/main-middleware')
 
 
-const app = MainMiddleware(Api(Db))
+Api(Db).then((Api) => {
 
-const port = 8000
+  const app = MainMiddleware(Api)
 
-app.listen(port, () => {
-  console.log('app listening on port '+port)
+  const port = 8000
+
+  app.listen(port, () => {
+    console.log('app listening on port '+port)
+  })
+
 })
+
+
 
